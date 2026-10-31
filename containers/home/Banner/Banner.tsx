@@ -342,7 +342,15 @@ const HomeBannerComponent = () => {
                     >
                       <Grid item>
                         <Button onClick={handleRouter} color="primary">
-                          Start Analysis
+                          Start skin Analysis
+                        </Button>
+                      </Grid>
+                      <Grid item>
+                        <Button
+                          href="http://13.235.134.200:4488/"
+                          color="primary"
+                        >
+                          Start hair Analysis
                         </Button>
                       </Grid>
                       <Grid item>
