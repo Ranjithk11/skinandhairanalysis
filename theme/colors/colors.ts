@@ -1,0 +1,15 @@
+import { Button } from "@mui/material";
+
+export const APP_COLORS = {
+  WHITE: "#FFFFFF",
+  GOOGLE: "#DB4437",
+  PRIMARY_COLOR: "#356A5A",
+  SECONDARY_COLOR: "#21849A",
+  TEXT_SECONDARY_COLOR:"#7B7B7B",
+  DISABLED_COLOR: "#bdc3c7",
+  DISABLED_BTN_COLOR: "#E9D7FE",
+  BELIZEHOLE:"#2980b9",
+  EMERALD:"#2ecc71",
+  CARROT:"#e67e22",
+  DARK_NAVGREEN_BLUE:"#142736"
+};

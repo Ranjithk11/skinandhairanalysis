@@ -1,0 +1,269 @@
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+
+.otp-input {
+  width: 45px !important;
+  height: 45px !important;
+  color: black;
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.blink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2) !important;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-banner-swiper {
+  .swiper-pagination-bullet {
+    width: 9px !important;
+    border-radius: 5px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #57aa6e !important;
+    width: 13px !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff !important;
+    transform: scale(0.5) !important;
+    width: 50px !important;
+    height: 80px !important;
+    transition: 0.2s;
+    background: rgba(19, 19, 19, 0.9) !important;
+    place-items: rgba(255, 255, 255, 0.9);
+  }
+
+  .swiper-button-prev {
+    left: -13px;
+  }
+
+  .swiper-button-next {
+    right: -13px;
+  }
+}
+
+.mainSwiper {
+  .swiper-slide {
+    img {
+      // width: 100%;
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+  transform: scale(0.5) !important;
+  width: 50px !important;
+  height: 80px !important;
+  transition: 0.2s;
+  background: rgba(102, 102, 102, 0.354) !important;
+  //display: none;
+  place-items: center;
+}
+
+.swiper-button-prev {
+  left: -13px;
+}
+
+.swiper-button-next {
+  right: -13px;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+.ocrloader p::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #18c89b;
+  position: relative;
+  right: 4px;
+}
+.ocrloader p {
+  color: #18c89b;
+  position: absolute;
+  bottom: 40%;
+  left: 30%;
+  font-size: 16px;
+  font-weight: 600;
+  animation: blinker 1.5s linear infinite;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.ocrloader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  // top: 22%;
+  backface-visibility: hidden;
+}
+
+.ocrloader span {
+  position: absolute;
+  left: 13px;
+  top: 0;
+  width: 90%;
+  height: 2px;
+  background-color: #18c89b;
+  box-shadow: 0 0 10px 1px #18c89b, 0 0 1px 1px #18c89b;
+  z-index: 1;
+  transform: translateY(95px);
+  animation: move 1.7s cubic-bezier(0.15, 0.54, 0.76, 0.74);
+  animation-iteration-count: infinite;
+}
+
+.ocrloader:before,
+.ocrloader:after,
+.ocrloader em:after,
+.ocrloader em:before {
+  border-color: #18c89b;
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 46px;
+  border-style: solid;
+  border-width: 0px;
+}
+.ocrloader:before {
+  left: 5px;
+  top: 5px;
+  border-left-width: 5px;
+  border-top-width: 5px;
+  border-radius: 5px 0 0 0;
+}
+.ocrloader:after {
+  right: 5px;
+  top: 5px;
+  border-right-width: 5px;
+  border-top-width: 5px;
+  border-radius: 0 5px 0 0;
+}
+.ocrloader em:before {
+  left: 5px;
+  bottom: 5px;
+  border-left-width: 5px;
+  border-bottom-width: 5px;
+  border-radius: 0 0 0 5px;
+}
+.ocrloader em:after {
+  right: 5px;
+  bottom: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 5px;
+  border-radius: 0 0 5px 0;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(370px);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(160px);
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+}
+.ribbon {
+  --f: 0.5em; /* control the folded part*/
+  --r: 0.8em; /* control the ribbon shape */
+  position: absolute;
+  top: 20px;
+  right: calc(-1 * var(--f));
+  padding-inline: 0.25em;
+  line-height: 1.8;
+  background: #478a0b;
+  border-bottom: var(--f) solid #0005;
+  border-left: var(--r) solid #0000;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--f)),
+    calc(100% - var(--f)) 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    0 calc(100% - var(--f)),
+    var(--r) calc(50% - var(--f) / 2)
+  );
+}
+
+.image-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.original-image,
+.cropped-face {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.original-image h3,
+.cropped-face h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+canvas {
+  max-width: 100%;
+}
